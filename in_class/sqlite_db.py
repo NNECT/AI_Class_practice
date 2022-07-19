@@ -67,3 +67,5 @@ with open('WeatherData.csv', encoding='utf-8') as f:
 insert_all(rows)
 rows = search_city("전주")
 print(*rows, sep='\n')
+
+
