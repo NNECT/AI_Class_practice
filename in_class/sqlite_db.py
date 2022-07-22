@@ -5,7 +5,8 @@ def create_db():
     conn = sqlite3.connect('WeatherData.sqlite')
     cur = conn.cursor()
 
-    query = 'CREATE TABLE WeatherData (prov TEXT, city TEXT, mode TEXT, tmEf TEXT, wf TEXT, tmn TEXT, tmx TEXT, rnSt TEXT);'
+    query = 'CREATE TABLE WeatherData ' \
+            '(prov TEXT, city TEXT, mode TEXT, tmEf TEXT, wf TEXT, tmn TEXT, tmx TEXT, rnSt TEXT);'
     cur.execute(query)
 
     conn.commit()
@@ -61,11 +62,12 @@ def search_city(city):
     return records
 
 
-create_db()
-with open('WeatherData.csv', encoding='utf-8') as f:
-    rows = [line.strip().split(',') for line in f.readlines()]
-insert_all(rows)
-rows = search_city("전주")
-print(*rows, sep='\n')
+if __name__ == '__main__':
+    create_db()
+    with open('WeatherData.csv', encoding='utf-8') as f:
+        rows = [line.strip().split(',') for line in f.readlines()]
+    insert_all(rows)
+    rows = search_city("전주")
+    print(*rows, sep='\n')
 
 
