@@ -1,0 +1,189 @@
+ 
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>저작자 저작물 조회 팝업 | 전체검색 | 한국음악저작권협회</title>
+<link rel="stylesheet" type="text/css" href="/css/default.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/common.css" media="all" />
+<link rel="stylesheet" type="text/css" href="/css/popup.css" media="all" />
+<script src="/js2/jquery-1.9.1.min.js"></script>
+<script src="/js2/ui.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<div id="header">
+		<h1>저작자 저작물 조회</h1>
+	</div><!-- //header -->
+
+<script>
+	this.focus();
+
+	/***************************
+     * 페이징 
+     ***************************/
+    function navigatePage(arg) { //페이징 관련 연산
+		var form = document.pagingForm;
+	   // form.EVENTID.value = "prod_select_detail";
+	    form.S_PAGENUMBER.value = arg;
+		form.target ="_self";
+        form.action="/srch2/srch_01_popup_mem_right.jsp";
+        form.submit();
+    }
+    
+    function change_sort(val) {
+    	var form = document.pagingForm;
+    	form.sort_field.value = val;
+    	form.S_PAGENUMBER.value = 1;
+    	form.target ="_self";
+        form.action="/srch2/srch_01_popup_mem_right.jsp";
+        form.submit();
+    }
+</script>
+	<div id="content">
+		<div class="board col" style="margin-top:0;">
+			<table>
+				<caption>저작자 저작물 목록</caption>
+				<colgroup>
+					<col style="width:auto" />
+					<col style="width:72%" />
+				</colgroup>
+				<tbody>
+					<tr>
+						<th>정렬조건</th>
+						<td style="text-align:left; padding-left:20px;">
+							<label><input type="radio" name="sort_field1" value="SORT_PBCTN_DAY" checked="checked" onclick="change_sort(this.value);" /> 등록일자</label>
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<label><input type="radio" name="sort_field1" value="SORT_PROD_TTL"    onclick="change_sort(this.value);" /> 저작물명</label>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="status_area">
+			<p>(W0726200) 지드래곤님의 작품목록 입니다. (175개의 작품)</p>
+			<p class="status fl" style="color:red;">세부 저작물 조회는 '저작물검색' 메뉴를 이용하여 주시기 바랍니다.</p>
+			<p class="fr">관리여부 표시: <i class="manage1">관</i> 관리&nbsp;&nbsp;<i class="manage2">비</i> 비관리</p>
+		</div>
+		<div class="board col">
+			<table>
+				<caption>저작자 저작물 목록</caption>
+				<colgroup>
+					<col style="width:auto" />
+					<col style="width:18%" />
+					<col style="width:18%" />
+					<col style="width:18%" />
+					<col style="width:18%" />
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">저작물명</th>
+						<th scope="col">가수명</th>
+						<th scope="col">작사</th>
+						<th scope="col">작곡</th>
+						<th scope="col">편곡</th>
+					</tr>
+				</thead>
+				<tbody>
+				
+					<tr>
+						<td> 봄여름가을겨울(STILL LIFE)</td>
+						<td>빅뱅<br/>BIGBANG</td>
+						<td>KUSH <img src="/images/common/control.gif"  alt="" /><br/>G-DRAGON <img src="/images/common/control.gif" alt="" /><br/>T.O.P <img src="/images/common/control.gif" alt="" /></td>
+						<td>VINCE <img src="/images/common/control.gif" alt="" /><br/>VVN <img src="/images/common/control.gif" alt="" /><br/>KUSH <img src="/images/common/control.gif" alt="" /><br/>G-DRAGON <img src="/images/common/control.gif" alt="" /><br/>T.O.P <img src="/images/common/control.gif" alt="" /></td>
+						<td>서원진 <img src="/images/common/control.gif" alt="" /><br/>24 <img src="/images/common/control.gif" alt="" /><br/>KUSH <img src="/images/common/control.gif" alt="" /></td>
+					</tr>
+				
+					<tr>
+						<td> 꽃길</td>
+						<td>BIGBANG<br/>빅뱅</td>
+						<td>권지용 <img src="/images/common/control.gif"  alt="" /><br/>최승현 <img src="/images/common/control.gif" alt="" /></td>
+						<td>권지용 <img src="/images/common/control.gif" alt="" /><br/>DELAZYN DAVID ANTHONY <img src="/images/common/control.gif" alt="" /><br/>DELAZYN DAVID ANTHONY <img src="/images/common/control.gif" alt="" /><br/>MISHAN CHAZ WILLIAM <img src="/images/common/control.gif" alt="" /><br/>MISHAN CHAZ WILLIAM <img src="/images/common/control.gif" alt="" /></td>
+						<td></td>
+					</tr>
+				
+					<tr>
+						<td> 개소리(BULLSHIT)</td>
+						<td>G-DRAGON(지드래곤)</td>
+						<td>G-DRAGON <img src="/images/common/control.gif"  alt="" /></td>
+						<td>이승주 <img src="/images/common/control.gif" alt="" /><br/>TEDDY <img src="/images/common/control.gif" alt="" /><br/>FUTURE BOUNCE 1 <img src="/images/common/control.gif" alt="" /><br/>G-DRAGON <img src="/images/common/control.gif" alt="" /><br/>FUTURE BOUNCE 2 <img src="/images/common/control.gif" alt="" /><br/>CHOICE 37 <img src="/images/common/control.gif" alt="" /></td>
+						<td>24 <img src="/images/common/control.gif" alt="" /><br/>이승주 <img src="/images/common/control.gif" alt="" /><br/>FUTURE BOUNCE 1 <img src="/images/common/control.gif" alt="" /><br/>FUTURE BOUNCE 2 <img src="/images/common/control.gif" alt="" /><br/>CHOICE 37 <img src="/images/common/control.gif" alt="" /></td>
+					</tr>
+				
+					<tr>
+						<td> INTRO 권지용(MIDDLE FINGERS UP)</td>
+						<td>G-DRAGON(지드래곤)</td>
+						<td>G-DRAGON <img src="/images/common/control.gif"  alt="" /></td>
+						<td>24 <img src="/images/common/control.gif" alt="" /><br/>KUSH <img src="/images/common/control.gif" alt="" /><br/>G-DRAGON <img src="/images/common/control.gif" alt="" /></td>
+						<td>24 <img src="/images/common/control.gif" alt="" /></td>
+					</tr>
+				
+					<tr>
+						<td> SUPER STAR</td>
+						<td>G-DRAGON(지드래곤)</td>
+						<td>JOE RHEE <img src="/images/common/control.gif"  alt="" /><br/>TEDDY <img src="/images/common/control.gif" alt="" /><br/>G-DRAGON <img src="/images/common/control.gif" alt="" /></td>
+						<td>서원진 <img src="/images/common/control.gif" alt="" /><br/>24 <img src="/images/common/control.gif" alt="" /><br/>JOE RHEE <img src="/images/common/control.gif" alt="" /><br/>TEDDY <img src="/images/common/control.gif" alt="" /><br/>FUTURE BOUNCE 1 <img src="/images/common/control.gif" alt="" /><br/>G-DRAGON <img src="/images/common/control.gif" alt="" /><br/>FUTURE BOUNCE 2 <img src="/images/common/control.gif" alt="" /><br/>CHOICE 37 <img src="/images/common/control.gif" alt="" /></td>
+						<td>서원진 <img src="/images/common/control.gif" alt="" /><br/>24 <img src="/images/common/control.gif" alt="" /><br/>JOE RHEE <img src="/images/common/control.gif" alt="" /><br/>TEDDY <img src="/images/common/control.gif" alt="" /><br/>FUTURE BOUNCE 1 <img src="/images/common/control.gif" alt="" /><br/>FUTURE BOUNCE 2 <img src="/images/common/control.gif" alt="" /><br/>CHOICE 37 <img src="/images/common/control.gif" alt="" /></td>
+					</tr>
+				
+					<tr>
+						<td> 무제</td>
+						<td>G-DRAGON(지드래곤)</td>
+						<td>G-DRAGON <img src="/images/common/control.gif"  alt="" /></td>
+						<td>G-DRAGON <img src="/images/common/control.gif" alt="" /><br/>CHOICE 37 <img src="/images/common/control.gif" alt="" /></td>
+						<td>선우정아 <img src="/images/common/control.gif" alt="" /><br/>CHOICE 37 <img src="/images/common/control.gif" alt="" /></td>
+					</tr>
+				
+					<tr>
+						<td> 팩트폭행</td>
+						<td>PSY<br/>싸이</td>
+						<td>PSY <img src="/images/common/control.gif"  alt="" /><br/>G-DRAGON <img src="/images/common/control.gif" alt="" /></td>
+						<td>유건형 <img src="/images/common/control.gif" alt="" /><br/>PSY <img src="/images/common/control.gif" alt="" /></td>
+						<td>유건형 <img src="/images/common/control.gif" alt="" /></td>
+					</tr>
+				
+					<tr>
+						<td> COMPLEX</td>
+						<td>자이언티</td>
+						<td>ZION.T <img src="/images/common/control.gif"  alt="" /><br/>DJ DOPSH <img src="/images/common/control.gif" alt="" /><br/>G-DRAGON <img src="/images/common/control.gif" alt="" /></td>
+						<td>ZION.T <img src="/images/common/control.gif" alt="" /><br/>SLOM <img src="/images/common/control.gif" alt="" /><br/>PEEJAY <img src="/images/common/control.gif" alt="" /></td>
+						<td>SLOM <img src="/images/common/control.gif" alt="" /><br/>PEEJAY <img src="/images/common/control.gif" alt="" /></td>
+					</tr>
+				
+					<tr>
+						<td> 에라모르겠다(FXXK IT)</td>
+						<td>BIGBANG(빅뱅)</td>
+						<td>TEDDY <img src="/images/common/control.gif"  alt="" /><br/>G-DRAGON <img src="/images/common/control.gif" alt="" /><br/>T.O.P <img src="/images/common/control.gif" alt="" /></td>
+						<td>R.TEE <img src="/images/common/control.gif" alt="" /><br/>TEDDY <img src="/images/common/control.gif" alt="" /><br/>G-DRAGON <img src="/images/common/control.gif" alt="" /></td>
+						<td>R.TEE <img src="/images/common/control.gif" alt="" /><br/>TEDDY <img src="/images/common/control.gif" alt="" /></td>
+					</tr>
+				
+					<tr>
+						<td> LAST DANCE</td>
+						<td>BIGBANG(빅뱅)</td>
+						<td>태양 <img src="/images/common/control.gif"  alt="" /><br/>G-DRAGON <img src="/images/common/control.gif" alt="" /><br/>T.O.P <img src="/images/common/control.gif" alt="" /></td>
+						<td>서원진 <img src="/images/common/control.gif" alt="" /><br/>전용준 <img src="/images/common/control.gif" alt="" /><br/>G-DRAGON <img src="/images/common/control.gif" alt="" /></td>
+						<td>서원진 <img src="/images/common/control.gif" alt="" /><br/>24 <img src="/images/common/control.gif" alt="" /></td>
+					</tr>
+				
+				</tbody>
+			</table>
+		</div><!-- //board col -->
+		 <div class="pagination">         <a href="#" class="direction first">처음</a>           <a href="#" class="direction prev">이전</a><span>        <a href="#"><strong>1</strong></a><a href="#" onclick="navigatePage('2');">  2</a> <a href="#" onclick="navigatePage('3');">  3</a> <a href="#" onclick="navigatePage('4');">  4</a> <a href="#" onclick="navigatePage('5');">  5</a> <a href="#" onclick="navigatePage('6');">  6</a> <a href="#" onclick="navigatePage('7');">  7</a> <a href="#" onclick="navigatePage('8');">  8</a> <a href="#" onclick="navigatePage('9');">  9</a> <a href="#" onclick="navigatePage('10');">  10</a>         </span><a href="#" class="direction next" onclick="navigatePage('11');">다음</a>        <a href="#" class="direction last" onclick="navigatePage('18');">끝</a>  </div><script>try { document.all.rows.value='10'; } catch ( e ) { ; }</script>
+	</div><!-- //content -->
+	<form name="pagingForm" method="post" action="/srch2/srch_01_popup_mem_right.jsp">
+		<input type="hidden" name="S_PAGENUMBER" value="1" />
+		<input type="hidden" name="S_MB_CD" value="W0726200" />
+		<input type="hidden" name="S_HNAB_GBN" value="I" />
+		<input type="hidden" name="hanmb_nm" value="지드래곤" />
+		<input type="hidden" name="sort_field" value="SORT_PBCTN_DAY">
+	</form>
+
+	<div id="footer">
+		<!--<span class="btn black"><button type="button" class="winclose">창닫기</button></span>-->
+		<span class="btn black"><button type="button" class="winclose" onclick="self.close();">창닫기</button></span>
+	</div>
+</div><!-- //wrap -->
+</body>
+</html>

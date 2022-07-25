@@ -2,7 +2,7 @@ import os
 import requests
 
 
-def download(url, filename, encoding='utf-8'):
+def get(url, filename, encoding='utf-8'):
     if not os.path.exists(filename):
         with open(filename, "w", encoding=encoding) as f:
             res = requests.get(url)
