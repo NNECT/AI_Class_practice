@@ -1,4 +1,4 @@
-import pickle
+import pickle_temp
 
 data = [
     (
@@ -26,9 +26,9 @@ data = [
 
 filename = 'sample.pickle'
 with open(filename, 'wb') as f:
-    pickle.dump(data, f)
+    pickle_temp.dump(data, f)
 
 with open(filename, 'rb') as f:
-    sample = pickle.load(f)
+    sample = pickle_temp.load(f)
 
 print(sample)

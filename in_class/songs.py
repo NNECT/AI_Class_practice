@@ -1,5 +1,5 @@
 import os
-import pickle
+import pickle_temp
 import re
 import requests
 
@@ -14,7 +14,7 @@ def download_songs_data(code, page):
     if not os.path.exists(filename):
         with open(filename, 'wb') as f:
             res = requests.post(url, data=payload)
-            pickle.dump(res.text, f)
+            pickle_temp.dump(res.text, f)
     # else:
     #     print(f'{filename}: already downloaded')
 
@@ -23,7 +23,7 @@ def get_songs_current_page(code, page):
     download_songs_data(code, page)
     filename = f'singer_songs/{code}_{page}.pickle'
     with open(filename, 'rb') as f:
-        text = pickle.load(f)
+        text = pickle_temp.load(f)
 
     # 테이블 부분 추출
     table = re.findall(r'<tbody>(.+?)</tbody>', text, re.DOTALL)[1]
