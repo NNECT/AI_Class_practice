@@ -34,7 +34,7 @@ def binarizer():
     print(bin2)
 
     bin = preprocessing.Binarizer().fit(x)
-    print(bin.transform(x))
+    # print(bin.transform(x))
 
 
 def imputer():

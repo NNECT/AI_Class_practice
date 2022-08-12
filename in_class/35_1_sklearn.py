@@ -1,8 +1,9 @@
 import numpy as np
 import pandas as pd
-from sklearn import datasets, svm, model_selection, preprocessing
 from pandas.plotting import scatter_matrix
 import matplotlib.pyplot as plt
+from matplotlib import font_manager, rc, colors
+from sklearn import datasets, svm, model_selection, preprocessing, neighbors
 
 
 def sklearn_basic_1():
@@ -84,6 +85,29 @@ def leaf_model():
     clf.fit(x_train, y_train)
     p = clf.predict(x_test)
     print(np.mean(p == y_test))
+
+
+def leaf_model_knn():
+    font_name = font_manager.FontProperties(fname='C:/Windows/Fonts/malgunsl.ttf').get_name()
+    rc('font', family=font_name)
+
+    leaf = pd.read_csv('data/leaf_train.csv', index_col=0)
+    # print(leaf)
+    x = leaf.values[:, 1:]
+    x = preprocessing.scale(x)
+    y = leaf.species
+    x_train, x_test, y_train, y_test = model_selection.train_test_split(x, y, train_size=0.8)
+
+    scores = []
+    for n in range(2, 11):
+        clf = neighbors.KNeighborsClassifier(n_neighbors=n)
+        clf.fit(x_train, y_train)
+        clf.predict(x_test)
+        scores.append(clf.score(x_test, y_test))
+        print(n, scores[-1])
+
+    plt.bar(range(2, 11), scores, color=colors.TABLEAU_COLORS)
+    plt.show()
 
 
 if __name__ == "__main__":
